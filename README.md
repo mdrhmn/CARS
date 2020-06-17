@@ -1,1 +1,1 @@
-# college_activity_reg_system
+# College Activity Registration System (CARS)
