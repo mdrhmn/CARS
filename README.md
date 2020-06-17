@@ -1,1 +1,1 @@
-# college-activity-reg
+# college_activity_reg_system
