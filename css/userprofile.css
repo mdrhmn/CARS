@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+body {
+    background-color: #eee;
+    /*font-family: Roboto,"Open Sans";*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    /* font-size: 2vw; */
+    /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300))); */
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 4px 4px 4px black;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.thumb-lg {
+    height: 128px;
+    width: 128px;
+    transition: 0.4s;
+}
+
+.bg-custom {
+    background-color: #007bff!important;
+}
+
+.bg-warna {
+    background-color: #32CD32!important;
+    /*alt = 24aaf7 */
+}
+
+.bg-yellow {
+    background-color: #f7d624!important;
+}
+
+.bg-orange {
+    background-color: orange!important;
+}
+
+.profile-user-box {
+    display: block;
+    border-radius: 5px;
+    background: yellow;
+}
+
+.card-box {
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /*0 1px 15px 1px rgba(52,40,104,.08);*/
+}
+
+.inbox-widget .inbox-item img {
+    width: 40px;
+}
+
+.inbox-widget .inbox-item {
+    border-bottom: 1px solid #f3f6f8;
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative
+}
+
+.inbox-widget .inbox-item .inbox-item-img {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    width: 40px
+}
+
+.inbox-widget .inbox-item img {
+    width: 40px
+}
+
+.inbox-widget .inbox-item .inbox-item-author {
+    color: #313a46;
+    display: block;
+    margin: 0
+}
+
+.inbox-widget .inbox-item .inbox-item-text {
+    color: #98a6ad;
+    display: block;
+    font-size: 14px;
+    margin: 0
+}
+
+.inbox-widget .inbox-item .inbox-item-date {
+    color: #98a6ad;
+    font-size: 11px;
+    position: absolute;
+    right: 7px;
+    top: 12px
+}
+
+.comment-list .comment-box-item {
+    position: relative
+}
+
+.comment-list .comment-box-item .commnet-item-date {
+    color: #98a6ad;
+    font-size: 11px;
+    position: absolute;
+    right: 7px;
+    top: 2px
+}
+
+.comment-list .comment-box-item .commnet-item-msg {
+    color: #313a46;
+    display: block;
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px
+}
+
+.comment-list .comment-box-item .commnet-item-user {
+    color: #98a6ad;
+    display: block;
+    font-size: 14px;
+    margin: 0
+}
+
+.comment-list a+a {
+    margin-top: 15px;
+    display: block
+}
+
+.ribbon-box .ribbon-primary {
+    background: #2d7bf4;
+}
+
+.ribbon-box .ribbon {
+    position: relative;
+    float: left;
+    clear: both;
+    padding: 5px 12px 5px 12px;
+    margin-left: -30px;
+    margin-bottom: 15px;
+    font-family: Rubik, sans-serif;
+    -webkit-box-shadow: 2px 5px 10px rgba(49, 58, 70, .15);
+    -o-box-shadow: 2px 5px 10px rgba(49, 58, 70, .15);
+    box-shadow: 2px 5px 10px rgba(49, 58, 70, .15);
+    color: #fff;
+    font-size: 13px;
+}
+
+.text-custom {
+    color: #007bff!important;
+}
+
+.badge-custom {
+    background: #007bff;
+    color: #fff;
+}
+
+.badge {
+    font-family: Rubik, sans-serif;
+    -webkit-box-shadow: 0 0 24px 0 rgba(0, 0, 0, .06), 0 1px 0 0 rgba(0, 0, 0, .02);
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, .06), 0 1px 0 0 rgba(0, 0, 0, .02);
+    padding: .35em .5em;
+    font-weight: 500;
+}
+
+.text-muted {
+    color: #98a6ad!important;
+}
+
+.font-13 {
+    font-size: 13px!important;
+}
+
+.hide {
+    display: none;
+    transition: 0.4s;
+}
+
+.edit-profile {
+    background: white;
+    color: #007bff;
+    font-weight: 500;
+    border: solid 1px #007bff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 4px;
+    transition: 0.2ss;
+    box-shadow: 1px 1px 1px black;
+}
+
+.edit-profile:hover {
+    text-decoration: none;
+    background: #eee;
+    color: #007bff;
+    transition: all 0.2s ease-in-out;
+}
+
+.edit-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.row .col-sm-6 .card-box {
+    color: white;
+    transition: 0.2s;
+    /*card from test*/
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    height: 130px;
+}
+
+.row .col-sm-6 .card-box h5 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card-box .additional {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background: orange;
+    transition: width 0.4s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.card-box.alt .additional {
+    background-color: #32CD32
+}
+
+.card-box:hover .additional {
+    width: 100%;
+}
+
+.card-box .additional .user-card {
+    width: 100px;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.card-box .additional .activities {
+    display: flex;
+    padding-left: 15px;
+}
+
+.card-box .additional .activities a {
+    text-decoration: none;
+}
+
+.card-box .additional .activities img {
+    height: 4rem;
+    width: 4rem;
+    margin-left: 5px;
+    margin-top: 10px;
+    box-shadow: none;
+    background: black;
+}
+
+.filter {
+    background: white;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+}
+
+.card-box .additional .more-info {
+    width: 250px;
+    float: left;
+    position: absolute;
+    left: 100px;
+    height: 100%;
+    padding-top: 5px;
+}
+
+.card-box .additional .more-info h5 {
+    margin-bottom: 0;
+}
+
+.card-box .general {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    color: #444444;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.card-box .general h2 {
+    font-size: 50px;
+}
+
+.activity-icon {
+    height: 3rem;
+    margin: 41px 26px;
+}
+
+.cover {
+    background: #898989;
+    background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url(../imgs/japan.jpg);
+    /*overlay*/
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    margin-bottom: 5px;
+    display: block;
+    align-items: center;
+}
+
+.welcome-text {
+    color: white;
+    font-size: 70px;
+    margin-top: 150px;
+    display: inline-block;
+}
+
+#profileHeader {
+    transition: 0.4s;
+    padding-top: 30px;
+}
+
+#profileDP {
+    transition: 0.4s;
+}
+
+.main-dp {
+    height: 150px;
+    width: 150px;
+    border: 4px solid #eee;
+    box-shadow: 4px 4px 4px black;
+}
+
+.project-icon {
+    border: 1.5px solid #eee;
+    box-shadow: 1.5px 1.5px 1.5px black;
+}
+
+.list-inline-item {
+    font-size: 30px;
+}
+
+.list.inline-item:nth-child(1) {
+    background: black;
+}
+
+.text-limit {
+    white-space: nowrap;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-body img {
+    height: 100px;
+    width: 100px;
+}
+
+.modal-dialog {
+    margin-top: 10%;
+}
+
+.navbar {
+    background: #292c2f;
+    padding: 5px 10px!important;
+}
+
+footer a {
+    text-decoration: none!important;
+}

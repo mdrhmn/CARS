@@ -1,0 +1,1199 @@
+/* FONTS            -------------------------------------------------------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+/* GENERAL      -------------------------------------------------------------------------------------------------------------------------------*/
+
+/* General settings */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Body settings */
+
+body {
+    background-color: #eee;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* Prevents overflow of page width at responsive screen sizes */
+    overflow-x: hidden;
+}
+
+/* Section settings */
+
+section {
+    padding: 50px 0
+}
+
+section h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+section h3.section-subheading {
+    margin-bottom: 75px;
+    text-transform: none;
+}
+
+/* Allows for smooth scrolling transition */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header settings */
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 4px 4px 4px black;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Image settings */
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    /* max-width: 100%; */
+}
+
+/* BACK-TO-TOP BUTTON -------------------------------------------------------------------------------------------------------------------------------*/
+
+#back-to-top {
+    display: inline-block;
+    background-color: #007bff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.fa-chevron-up {
+    font-size: 1.5em;
+    color: #fff;
+    padding: 20%;
+}
+
+#back-to-top::after {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#back-to-top:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#back-to-top:active {
+    background-color: #555;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* NAVBAR AND COVER -------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Cover photo and container */
+
+.cover {
+    /* The image used */
+    /* Cover image at the top with gradient layer*/
+    background: linear-gradient( rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url("../imgs/cover-compressed/kk8_above-min.jpg");
+    /* Cover height = 1/4 page */
+    /* min-height: 480px; */
+    /* Cover height = full page */
+    min-height: 100vh;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Needed to position the navbar */
+    position: relative;
+}
+
+/* Navbar */
+
+.navbar {
+    overflow: visible;
+    background-color: transparent;
+    padding: 30px 10px;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    z-index: 99;
+    top: 0;
+    will-change: transform;
+}
+
+/* Header text of cover */
+
+#header-container {
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+}
+
+#cover-header {
+    color: white;
+    /* margin: auto; */
+    /* padding-top: 200px; */
+    /* padding-top: 500px; */
+    font-size: 70px;
+}
+
+/* Button at cover */
+
+#profile-btn {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px;
+    /* padding-bottom: 100px; */
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Change colour of hamburger navbar collapse icon */
+
+.fa-bars {
+    color: white;
+}
+
+/* Override colour of navbar links */
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+/* Change colour of navbar links at visited */
+
+.navbar-nav .nav-item .nav-link:visited {
+    color: white;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: white;
+}
+
+/* Change colour of navbar links at hover */
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: yellow;
+}
+
+/* Change colour of navbar links at active */
+
+.navbar-nav .nav-item .nav-link:active {
+    color: yellow;
+}
+
+/* Responsive media - adjust width (Media Queries) */
+
+@media screen and (min-width: 768px) {
+    .modal-dialog {
+        width: 700px;
+        /* New width for default modal */
+    }
+    .modal-sm {
+        width: 350px;
+        /* New width for small modal */
+    }
+}
+
+/* Responsive media - adjust width */
+
+@media screen and (min-width: 992px) {
+    .modal-lg {
+        width: 950px;
+        /* New width for large modal */
+    }
+}
+
+/* Transitions of navbars between scrolls (colored)*/
+
+.navbar-colored {
+    background-color: #292c2f;
+}
+
+/* Transitions of navbars between scrolls (colored)*/
+
+.navbar-transparent {
+    background-color: transparent;
+}
+
+/* USER PROFILE DROPDOWN (NAVBAR) -------------------------------------------------------------------------------------------------------------------------------*/
+
+.nav-link img {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    margin: -8px 0;
+    float: left;
+    margin-right: 10px;
+}
+
+.navbar .nav-item i {
+    font-size: 18px;
+}
+
+.navbar .dropdown-item i {
+    font-size: 16px;
+    min-width: 22px;
+    align-items: center;
+}
+
+.navbar .nav-item.open>a {
+    background: none !important;
+}
+
+.navbar .dropdown-menu {
+    border-radius: 1px;
+    border-color: #e5e5e5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+}
+
+.navbar .dropdown-menu li a {
+    padding: 8px 20px;
+    line-height: normal;
+}
+
+.navbar .dropdown-item .material-icons {
+    font-size: 21px;
+    line-height: 16px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.navbar ul.nav li a.notifications, .navbar ul.nav li a.messages {
+    position: relative;
+    margin-right: 10px;
+}
+
+.navbar ul.nav li a.messages {
+    margin-right: 20px;
+}
+
+.navbar .active a, .navbar .active a:hover, .navbar .active a:focus {
+    background: transparent !important;
+}
+
+/* Responsive media - adjust width */
+
+@media (min-width: 1200px) {
+    .form-inline .input-group {
+        width: 300px;
+        margin-left: 30px;
+    }
+}
+
+/* Responsive media - adjust width */
+
+@media (max-width: 1199px) {
+    .form-inline {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .input-group {
+        width: 100%;
+    }
+}
+
+/* PROFILE (HISTORY, VISION & MISSION) -------------------------------------------------------------------------------------------------------------------------------*/
+
+#profile {
+    background-color: #eee;
+}
+
+.profile-heading {
+    margin: 15px 0;
+    text-transform: none;
+}
+
+/* KK8 ACTIVITIES  -------------------------------------------------------------------------------------------------------------------------------*/
+
+#activities {
+    background-color: #f8f9fa;
+}
+
+.align-items-center {
+    align-items: center!important;
+}
+
+.form-row {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.img-square {
+    position: relative;
+    padding-bottom: 100%;
+    box-shadow: 4px 4px 4px black;
+    will-change: transform;
+}
+
+.img-square .img-cover {
+    position: absolute;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activities-hover img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    box-shadow: 4px 4px 4px black;
+}
+
+.activities-hover:hover img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    box-shadow: 4px 4px 4px black;
+}
+
+/* FACILITIES */
+
+#facilities {
+    background-color: #eee;
+}
+
+#facilities .facilities-item {
+    right: 0;
+    margin: 0 0 15px;
+    will-change: transform;
+}
+
+#facilities .facilities-item .facilities-link {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer
+}
+
+#facilities .facilities-item .facilities-link .facilities-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+    opacity: 0;
+    background: rgba(254, 209, 54, .9)
+}
+
+#facilities .facilities-item .facilities-link .facilities-hover:hover {
+    opacity: 1
+}
+
+#facilities .facilities-item .facilities-link .facilities-hover .facilities-hover-content {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    color: #fff
+}
+
+#facilities .facilities-item .facilities-link .facilities-hover .facilities-hover-content i {
+    margin-top: -12px
+}
+
+#facilities .facilities-item .facilities-link .facilities-hover .facilities-hover-content h3, #facilities .facilities-item .facilities-link .facilities-hover .facilities-hover-content h4 {
+    margin: 0
+}
+
+#facilities .facilities-item .facilities-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+    background-color: #fff
+}
+
+#facilities .facilities-item .facilities-caption h4 {
+    margin: 0;
+    text-transform: none
+}
+
+#facilities .facilities-item .facilities-caption p {
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+#facilities * {
+    z-index: 2
+}
+
+@media (min-width:767px) {
+    #facilities .facilities-item {
+        margin: 0 0 30px
+    }
+}
+
+/* COLLEGE TEAM -------------------------------------------------------------------------------------------------------------------------------*/
+
+#team {
+    padding-bottom: 0px!important;
+    background-color: #f8f9fa;
+}
+
+.team-member {
+    margin-bottom: 50px;
+    text-align: center
+}
+
+.team-member img {
+    width: 225px;
+    height: 225px;
+    border: 7px solid #eee;
+    box-shadow: 4px 4px 4px black;
+}
+
+.team-member h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none
+}
+
+.team-member p {
+    margin-top: 0
+}
+
+/* KK8 MEDIA        -------------------------------------------------------------------------------------------------------------------------------*/
+
+#media {
+    text-align: center;
+}
+
+#media iframe {
+    display: inline-block;
+}
+
+/* MAP       -------------------------------------------------------------------------------------------------------------------------------*/
+
+#map {
+    background-color: #f8f9fa;
+}
+
+#google-map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+/* FOOTER -------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Main footer settings */
+
+.footer-distributed {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 101%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    will-change: transform;
+    /* margin-top: 80px; */
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #5383d3;
+    text-decoration: none;
+    ;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 20%;
+    padding-top: 10px;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/* Social media icon settings */
+
+.f_social_icon a {
+    text-decoration: none;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 45px;
+    color: #858da8;
+    display: inline-block;
+    background: #ebeef5;
+    text-align: center;
+    /* Transition settings for hovering effect */
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+/* Hovering effect changes colour of social media icons */
+
+.twitter a:hover {
+    background: #00aced;
+    border-color: #00aced;
+    color: white;
+}
+
+.facebook a:hover {
+    background: #3b5998;
+    border-color: #3b5998;
+    color: white;
+}
+
+.instagram a:hover {
+    background: #E1306C;
+    border-color: #E1306C;
+    color: white;
+}
+
+.youtube a:hover {
+    background: #c4302b;
+    border-color: #c4302b;
+    color: white;
+}
+
+/* Make footer responsive (Media Queries) */
+
+@media (max-width: 880px) {
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}
+
+/* MODAL - FACILITIES   -------------------------------------------------------------------------------------------------------------------------------*/
+
+.facilities-modal .modal-dialog {
+    max-width: none;
+}
+
+.facilities-modal .modal-content {
+    /* min-height: 100%; */
+    padding: 20px 0;
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.facilities-modal .modal-content h2 {
+    font-size: 3em;
+    margin-bottom: 15px
+}
+
+.facilities-modal .modal-content p {
+    margin-bottom: 30px
+}
+
+.facilities-modal .modal-content ul.list-inline {
+    margin-top: 0;
+    margin-bottom: 30px
+}
+
+.facilities-modal .modal-content img {
+    margin-bottom: 30px
+}
+
+.facilities-modal .modal-content button {
+    cursor: pointer
+}
+
+.facilities-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    /* width: 75px; */
+    height: 75px;
+    cursor: pointer;
+    background-color: transparent
+}
+
+.facilities-modal .modal-backdrop {
+    display: none;
+    opacity: 0
+}
+
+.facilities-close {
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    border-radius: 100%;
+    background-color: #0a0a0a;
+    z-index: 4;
+    color: #fff;
+    line-height: 3rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.facilities-close:hover {
+    background: yellow;
+}
+
+.fa-times {
+    color: white;
+}
+
+/* GENERAL MODAL SETTINGS */
+
+.modal-sm {
+    max-width: 80% !important;
+}
+
+.signup-form {
+    height: 63vh;
+}
+
+.login-form {
+    height: 39vh;
+}
+
+/* MODAL (LOG IN PAGE) -------------------------------------------------------------------------------------------------------------------------------*/
+
+.form-control {
+    box-shadow: none;
+    border-color: #ddd;
+}
+
+.form-control:focus {
+    border-color: yellow;
+}
+
+/* Log In form settings */
+
+.login-form form {
+    color: #434343;
+    border-radius: 1px;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #f3f3f3;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+/* Log In header settings */
+
+.login-form h4 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* KK8 avatar setttings */
+
+.login-form .avatar {
+    color: #fff;
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 9;
+    background: transparent;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Size of KK8 avatar */
+
+.login-form .avatar i {
+    font-size: 62px;
+}
+
+/* Slight margin of modal background before the text at bottom of modal */
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+/*  */
+
+.login-form .form-control, .login-form .btn {
+    min-height: 40px;
+    border-radius: 2px;
+    transition: all 0.5s;
+}
+
+/* Colour settings for Sign In button */
+
+.login-form .btn {
+    /* Blue background */
+    background: #007bff;
+    /* No broder */
+    border: none;
+    /* Set the distance between lines of text */
+    line-height: normal;
+}
+
+.login-form .btn:hover, .login-form .btn:focus {
+    /* Change blue colour a bit when hovered */
+    background: #0099ff;
+}
+
+/* Align remember me checkbox to the left */
+
+.login-form .checkbox-inline {
+    float: left;
+}
+
+.login-form input[type="checkbox"] {
+    margin-top: 2px;
+}
+
+.login-form .forgot-link {
+    float: right;
+}
+
+.login-form .small {
+    font-size: 13px;
+}
+
+/* Colour for "Don't have an account" text at bottom of modal */
+
+#no-account {
+    color: white;
+}
+
+/* Colour for "Sign-up" link at bottom of modal */
+
+#no-account a {
+    color: yellow;
+}
+
+/* MODAL (REGISTER - NEW)-------------------------------------------------------------------------------------------------------------------------------*/
+
+.form-group {
+    margin: auto;
+    width: 100%;
+}
+
+.form-control {
+    height: 40px;
+    box-shadow: none;
+    /* color: #969fa4; */
+}
+
+.form-control:focus {
+    border-color: #5cb85c;
+}
+
+.form-control, .btn {
+    border-radius: 3px;
+}
+
+.signup-form h4 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.signup-form .avatar {
+    color: #fff;
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 9;
+    background: transparent;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form .avatar i {
+    font-size: 62px;
+}
+
+.signup-form a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.signup-form a:hover {
+    text-decoration: none;
+}
+
+.signup-form form a {
+    color: #0099ff;
+    text-decoration: none;
+}
+
+.signup-form form a:hover {
+    text-decoration: underline;
+}
+
+.signup-form h2 {
+    color: black;
+    margin: 0 0 15px;
+    position: relative;
+    text-align: center;
+}
+
+.signup-form h2:before, .signup-form h2:after {
+    content: "";
+    height: 2px;
+    width: 30%;
+    background: #d4d4d4;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}
+
+.signup-form h2:before {
+    left: 0;
+}
+
+.signup-form h2:after {
+    right: 0;
+}
+
+.signup-form .hint-text {
+    color: black;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.signup-form form {
+    color: black;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background: white;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px 30px 0px 30px;
+}
+
+.signup-form .form-group {
+    margin-bottom: 20px;
+}
+
+.signup-form input[type="checkbox"] {
+    margin-top: 3px;
+}
+
+.signup-form a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.signup-form a:hover {
+    text-decoration: none;
+}
+
+.signup-form form a {
+    color: #0099ff;
+    text-decoration: none;
+}
+
+.signup-form form a:hover {
+    text-decoration: underline;
+}
+
+#have-account {
+    color: white;
+}
+
+#have-account a {
+    color: yellow;
+}
+
+#have-account a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+#modals {
+    position: sticky;
+}
+
+.masthead-text {
+    height: 300px;
+}
+
+.form-control {
+    height: 45px;
+}
+
+select:hover {
+    color: #444645;
+    background: #ddd;
+}
+
+.login-or {
+    position: relative;
+    font-size: 18px;
+    color: #aaa;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+}
+
+.hr-or {
+    background-color: #cdcdcd;
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+#login-dp {
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+#login-dp .help-block {
+    font-size: 12px
+}
+
+#login-dp .social-buttons {
+    margin: 12px 0
+}
+
+#login-dp .social-buttons a {
+    width: 49%;
+}
+
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+
+.btn-fb {
+    color: #fff;
+    background-color: #3b5998;
+}
+
+.btn-fb:hover {
+    color: #fff;
+    background-color: #496ebc
+}
+
+.btn-tw {
+    color: #fff;
+    background-color: #55acee;
+}
+
+.btn-tw:hover {
+    color: #fff;
+    background-color: #59b5fa;
+}
+
+@media(max-width:768px) {
+    #login-dp {
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom {
+        background-color: inherit;
+        border-top: 0 none;
+    }
+}
+
+.progress {
+    height: 5px;
+}
+
+.block-help {
+    font-weight: 300;
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+body {
+    background-color: #eeeeee;
+}
+
+.mainContainer {
+    width: 100%;
+    padding-top: 100px;
+    min-height: 90vh;
+    justify-content: center;
+    display: flex;
+    background-image: url(../imgs/LogoBackgroundIcon/graybackground.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 150px;
+}
+
+.containerAct {
+    width: 70%;
+    min-height: 60vh;
+}
+
+.backbtn {
+    position: absolute;
+    transform: translate(-60px, -45px);
+    cursor: pointer;
+}
+
+.progressbar {
+    width: 100%;
+    text-align: center;
+    padding-top: 3em;
+    justify-content: space-between;
+    display: flex;
+}
+
+.points {
+    width: 24.5%;
+    border-radius: 5px;
+    height: 10px;
+    background-color: rgb(172, 172, 172);
+    float: right;
+    transition: ease-in-out 0.5s;
+}
+
+.done {
+    background-color: #007bff;
+    transition: ease-in-out 0.5s;
+}
+
+#gap {
+    height: 10px;
+    width: 100%;
+}
+
+.modal-box {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    box-shadow: 0 0 10px -5px;
+    margin-bottom: 30px;
+}
+
+.nav-questions {
+    margin-top: 20px;
+}
+
+.next-step {
+    float: right;
+    width: 100px;
+}
+
+.previous-step {
+    float: left;
+    width: 100px;
+}
+
+#notice1, #notice2 {
+    color: red;
+    font-size: small;
+    float: right;
+}
+
+.visable {
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0;
+    width: 0%;
+    visibility: hidden;
+    position: absolute;
+    height: 0%;
+    overflow: hidden;
+}
+
+/* others--------------------------- */
+
+h1 {
+    text-shadow: none;
+}
+
+.activityTitle {
+    font-weight: 600;
+}
+
+/* QUESTION 1---------------- participant vs volunteer */
+
+.Q1 {
+    text-align: center;
+}
+
+.Q1>h3 {
+    text-align: left;
+}
+
+.chooseType {
+    padding-top: 5px;
+    justify-content: space-evenly;
+    display: flex;
+    height: 100%;
+}
+
+.volunteer, .participant {
+    width: 40%;
+    border-radius: 5px;
+    transition: ease-in-out 0.1s;
+    padding-top: 15px;
+    /* background-color: #f7f7f7; */
+    border: #e0e0e0 1px solid;
+}
+
+.volunteer>img, .participant>img {
+    border-radius: 5px;
+}
+
+.volunteer>p, .participant>p {
+    font-size: medium;
+}
+
+.highlight {
+    background-color: #F1C40F;
+}
+
+.volunteer:hover, .participant:hover {
+    cursor: pointer;
+    background-color: rgb(255, 230, 128);
+    transition: ease-in-out 0.1s;
+}
+
+.chooseDesc {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* --------------------------------------------- */
+
+.noshadow {
+    box-shadow: none;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-width: 1px;
+}
+
+.name {
+    display: flex;
+}
+
+.firstname, .lastname {
+    width: 45%;
+}
+
+.complete {
+    text-align: center;
+    padding: 50px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* biro buttons */
+
+#Biro-buttons-list {
+    /* background-color: #F1C40F; */
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: space-around;
+    display: flex;
+}
+
+.Biro-buttons {
+    padding-top: 7px;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-align: center;
+    border: #e0e0e0 1px solid;
+    width: 110px;
+    height: 40px;
+    float: left;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Biro-buttons:hover {
+    background-color: rgb(255, 230, 128);
+}
+
+#biro-desc {
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}

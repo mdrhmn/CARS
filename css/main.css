@@ -1,0 +1,408 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Allows for smooth scrolling transition */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR AND COVER -------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Navbar */
+
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    padding: 5px 10px;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 50px;
+    z-index: 20;
+    top: 0;
+}
+
+/* Footer */
+
+.page-footer {
+    background-color: black;
+    color: white;
+}
+
+/* Header text of cover */
+
+#cover-header {
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+    font-size: 70px;
+}
+
+/* Button at cover */
+
+#profile-btn {
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    border-radius: 3px;
+    color: #fff;
+    font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+/* Override colour of navbar links */
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+/* Change colour of navbar links at visited */
+
+.navbar-nav .nav-item .nav-link:visited {
+    color: white;
+}
+
+/* Change colour of navbar links at hover */
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: yellow;
+}
+
+/* Change colour of navbar links at active */
+
+.navbar-nav .nav-item .nav-link:active {
+    color: yellow;
+}
+
+/* Transitions of navbars between scrolls (colored)*/
+
+.navbar-colored {
+    background-color: #000;
+}
+
+/* Transitions of navbars between scrolls (colored)*/
+
+.navbar-transparent {
+    background-color: transparent;
+}
+
+/* MODAL (LOG IN PAGE) */
+
+.form-control {
+    box-shadow: none;
+    border-color: #ddd;
+}
+
+.form-control:focus {
+    border-color: #4aba70;
+}
+
+.login-form {
+    width: 350px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.login-form form {
+    color: #434343;
+    border-radius: 1px;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #f3f3f3;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+.login-form h4 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.login-form .avatar {
+    color: #fff;
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 9;
+    background: transparent;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.login-form .avatar i {
+    font-size: 62px;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form .form-control, .login-form .btn {
+    min-height: 40px;
+    border-radius: 2px;
+    transition: all 0.5s;
+}
+
+.login-form .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.login-form .btn {
+    background: #4aba70;
+    border: none;
+    line-height: normal;
+}
+
+.login-form .btn:hover, .login-form .btn:focus {
+    background: #42ae68;
+}
+
+.login-form .checkbox-inline {
+    float: left;
+}
+
+.login-form input[type="checkbox"] {
+    margin-top: 2px;
+}
+
+.login-form .forgot-link {
+    float: right;
+}
+
+.login-form .small {
+    font-size: 13px;
+}
+
+.login-form a {
+    color: #4aba70;
+}
+
+#no-account {
+    color: white;
+}
+
+.login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* MODAL (REGISTER PAGE) */
+
+.form-control {
+    height: 40px;
+    box-shadow: none;
+    color: #969fa4;
+}
+
+.form-control:focus {
+    border-color: #5cb85c;
+}
+
+.form-control, .btn {
+    border-radius: 3px;
+}
+
+.signup-form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.signup-form h2 {
+    color: #636363;
+    margin: 0 0 15px;
+    position: relative;
+    text-align: center;
+}
+
+.signup-form h2:before, .signup-form h2:after {
+    content: "";
+    height: 2px;
+    width: 30%;
+    background: #d4d4d4;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}
+
+.signup-form h2:before {
+    left: 0;
+}
+
+.signup-form h2:after {
+    right: 0;
+}
+
+.signup-form .hint-text {
+    color: #999;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.signup-form form {
+    color: #999;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background: white;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+.signup-form .form-group {
+    margin-bottom: 20px;
+}
+
+.signup-form input[type="checkbox"] {
+    margin-top: 3px;
+}
+
+.signup-form .btn {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 140px;
+    outline: none !important;
+}
+
+.signup-form .row div:first-child {
+    padding-right: 10px;
+}
+
+.signup-form .row div:last-child {
+    padding-left: 10px;
+}
+
+.signup-form a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.signup-form a:hover {
+    text-decoration: none;
+}
+
+.signup-form form a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.signup-form form a:hover {
+    text-decoration: underline;
+}
+
+.signup-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#have-account {
+    color: white;
+}
+
+#have-account a {
+    color: #4aba70;
+    text-decoration: none;
+}
+
+#modals {
+    position: sticky;
+}
+
+/* 'X' button to close the log-in modal */
+
+/* .close {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    padding: 12px 16px;
+    transform: translate(-590%, 35%);
+} */
+
+/*   
+#navbar a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+} */
+
+/* #navbar #logo {
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.4s;
+} */
+
+/* @media screen and (max-width: 580px) {
+    #navbar {
+        padding: 20px 10px !important;
+    }
+    #navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    #navbar-right {
+        float: none;
+    }
+} */
+
+/* header {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    background-color: #24252A;
+}
+
+li, a, button, nav {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #EDF0F1;
+    text-decoration: none;
+}
+
+
+
+.logo {
+    cursor: pointer;
+}
+
+.header-nav-links {
+    list-style: none;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #24252A;
+    color: #EDF0F1;
+    text-align: center;
+} */
