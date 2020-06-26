@@ -1,9 +1,9 @@
 # College Activity Registration System (CARS)
 
-## Group Name: CitizenScientist
+## Group Details
 
-## Group Members:
-
+Group Name: CitizenScientist
+Group Members:
 1. AJWAD BIN ALIAS (WIF180005 - 17171780/2)
 2. MUHAMMAD RAHIMAN BIN ABDULMANAB (WIF180046 - 17138489/2)
 3. NUR FAIDZ HAZIRAH BINTI NOR'AZMAN (WIF180059 - 17070482/1)
