@@ -112,9 +112,8 @@
         $twitter_acc = mysqli_real_escape_string($mysqli, $_POST['twitter_acc']);
         $facebook_acc = mysqli_real_escape_string($mysqli, $_POST['facebook_acc']);
     
-        $result = mysqli_query($mysqli, "UPDATE student_t SET first_name='$first_name', last_name='$last_name', phone_no='$phone_no', twitter_acc='$twitter_acc', facebook_acc='$facebook_acc' WHERE studentID=$studentID");
         $address = $address1."; ".$address2;
-        $result2= mysqli_query($mysqli,"UPDATE address_t SET address='$address', city='$city', state='$state', zip='$zip' WHERE studentID=$studentID ");
+        $result = mysqli_query($mysqli, "UPDATE student_t SET first_name='$first_name', last_name='$last_name', phone_no='$phone_no', twitter_acc='$twitter_acc', facebook_acc='$facebook_acc',address='$address', city='$city', state='$state', zip='$zip' WHERE studentID=$studentID");
         header("Location: usersettings.php?action=personal_update_successful");
         mysqli_close($mysqli);
         
@@ -216,12 +215,10 @@
         $checkpass = $res['password'];
 
         if(password_verify($inputpass,$checkpass)){
-            $result = mysqli_query($mysqli, "DELETE FROM address_t WHERE studentID=$studentID");
-            $result2 = mysqli_query($mysqli, "DELETE FROM complaint_t WHERE studentID=$studentID");
-            $result3 = mysqli_query($mysqli, "DELETE FROM registration_t WHERE studentID=$studentID");
-            $result5 = mysqli_query($mysqli, "DELETE FROM security_questions_t WHERE studentID=$studentID");
-            $result6 = mysqli_query($mysqli, "DELETE FROM student_exp_t WHERE studentID=$studentID");
-            $result7 = mysqli_query($mysqli, "DELETE FROM student_t WHERE studentID=$studentID");
+            $result = mysqli_query($mysqli, "DELETE FROM complaint_t WHERE studentID=$studentID");
+            $result2 = mysqli_query($mysqli, "DELETE FROM registration_t WHERE studentID=$studentID");
+            $result3 = mysqli_query($mysqli, "DELETE FROM student_exp_t WHERE studentID=$studentID");
+            $result4 = mysqli_query($mysqli, "DELETE FROM student_t WHERE studentID=$studentID");
             header("Location: deleteacc.php?action=deleted_acc");
         }
         else{

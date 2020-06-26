@@ -97,7 +97,7 @@
         $studentID = $_SESSION['studentID'];
         $question = mysqli_real_escape_string($mysqli, $_POST['user_question']);
         $answer = mysqli_real_escape_string($mysqli, $_POST['user_answer']);
-        $result = mysqli_query($mysqli, "UPDATE security_questions_t SET question='$question', answer='$answer' WHERE studentID=$studentID");
+        $result = mysqli_query($mysqli, "UPDATE student_t SET question='$question', answer='$answer' WHERE studentID=$studentID");
         header("Location: usersettings.php?action=securityq_update_successfully");
         mysqli_close($mysqli);
     }
@@ -110,7 +110,7 @@
         $inputemail = $_POST['email'];
         
 
-        //If user is logged in, need to verify email against email in 
+        //If user is logged in, need to verify email against email in DB
         if( isset ($_SESSION['logged_in']) ){
             $studentID = $_SESSION['studentID'];
             $check = mysqli_query($mysqli, "SELECT email FROM student_t WHERE studentID=$studentID");
@@ -153,7 +153,7 @@
     if( isset($_POST["verifySecurity"])  && isset($_SESSION['studentID'])){
         $studentID = $_SESSION['studentID'];
         $inputans = $_POST['answer'];
-        $check = mysqli_query($mysqli,"SELECT answer FROM security_questions_t WHERE studentID='$studentID'");
+        $check = mysqli_query($mysqli,"SELECT answer FROM student_t WHERE studentID='$studentID'");
         $res = mysqli_fetch_assoc($check);
         $checkans = $res['answer'];
         

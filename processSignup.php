@@ -112,20 +112,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Insert data into student_T table
                 $file = "profile_pic_placeholder.png";
-                $query2 = "INSERT INTO student_T(studentID, username, password, email, profile_pic_path)
-                    VALUES('$matric_number','$username','$pass_hash','$email','$file')";
-
-                // Insert data into security_questions_T table
-                $query3 = "INSERT INTO security_questions_T(studentID, question, answer) 
-                    VALUES('$matric_number','$sec_question', '$sec_answer')";
-
-                // Insert data into address_T table
-                $query4 = "INSERT INTO address_T(studentID) 
-                    VALUES('$matric_number')";
+                $query2 = "INSERT INTO student_T(studentID, username, password, email, profile_pic_path, question, answer)
+                    VALUES('$matric_number','$username','$pass_hash','$email','$file','$sec_question', '$sec_answer')";
 
                 $result2 = mysqli_query($mysqli, $query2);
-                $result3 = mysqli_query($mysqli, $query3);
-                $result4 = mysqli_query($mysqli, $query4);
 
                 // Debuggging
                 // if ($result2 && $result3) {

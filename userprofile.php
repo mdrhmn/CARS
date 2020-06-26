@@ -52,29 +52,23 @@ if (
         if(isset($_SESSION['logged_in']) && isset($_SESSION['studentID'])){
             $studentID = $_SESSION['studentID'];
         }
-        $result = mysqli_query($mysqli,"SELECT username, faculty, biography,profile_pic_path FROM student_t WHERE studentID=$studentID  ");
-        $result2 = mysqli_query($mysqli,"SELECT first_name, last_name, phone_no, twitter_acc, facebook_acc FROM student_t WHERE studentID=$studentID  ");
-        $result3 = mysqli_query($mysqli,"SELECT address, city, state, zip FROM address_t WHERE studentID=$studentID");
+        $result = mysqli_query($mysqli,"SELECT username, faculty, biography,profile_pic_path,first_name, last_name, phone_no, twitter_acc, facebook_acc, address, city, state, zip FROM student_t WHERE studentID=$studentID  ");
+  
                             
         $res = mysqli_fetch_array($result);
         $username = $res['username'];
         $faculty = $res['faculty'];
         $biography = $res['biography'];
         $image = 'imgs/profilepicture/'.$res["profile_pic_path"];
-
-
-        $res2=mysqli_fetch_array($result2);
-        $first_name=$res2['first_name'];
-        $last_name=$res2['last_name'];
-        $phone_no=$res2['phone_no'];
-        $twitter_acc = $res2['twitter_acc'];
-        $facebook_acc = $res2['facebook_acc'];
-        
-        $res3=mysqli_fetch_array($result3);
-        $address=$res3['address'];
-        $city=$res3['city'];
-        $state=$res3['state'];
-        $zip=$res3['zip'];
+        $first_name=$res['first_name'];
+        $last_name=$res['last_name'];
+        $phone_no=$res['phone_no'];
+        $twitter_acc = $res['twitter_acc'];
+        $facebook_acc = $res['facebook_acc'];
+        $address=$res['address'];
+        $city=$res['city'];
+        $state=$res['state'];
+        $zip=$res['zip'];
     
         //split address in sql to two seperate fields
         $address = explode("; ",$address);

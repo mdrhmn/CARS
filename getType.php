@@ -1,9 +1,9 @@
 <?php
 include "config.php";
 
-$catid = $_POST['cat'];
+$category = $_POST['cat'];
 
-$sql = "SELECT id,name FROM type_T WHERE category=".$catid;
+$sql = "SELECT id,name FROM type_T WHERE category='$category'";
 
 $result = mysqli_query($mysqli,$sql);
 

@@ -213,14 +213,13 @@ if ($_SESSION['logged_in'] == false)
                                         <option value="0">- Select -</option>
                                         <?php
                                         // Fetch category
-                                        $sql_category = "SELECT * FROM category_T";
+                                        $sql_category = "SELECT DISTINCT category FROM type_T";
                                         $category_data = mysqli_query($mysqli, $sql_category);
                                         while ($row = mysqli_fetch_assoc($category_data)) {
-                                            $catid = $row['id'];
-                                            $cat_name = $row['complaint_category'];
+                                            $cat_name = $row['category'];
 
                                             // Option
-                                            echo "<option value='" . $catid . "' >" . $cat_name . "</option>";
+                                            echo "<option value='" . $cat_name . "' >" . $cat_name . "</option>";
                                         }
                                         ?>
                                     </select>

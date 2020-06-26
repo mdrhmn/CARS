@@ -183,10 +183,10 @@ if (
                                             }
                                         ?>
                                         <div class="mt-4 code-box">
-                                            <input class="form-control" id="codeBox1" name="code1" type="text" maxlength="1" onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)" />
-                                            <input class="form-control" id="codeBox2" name="code2" type="text" maxlength="1" onkeyup="onKeyUpEvent(2, event)" onfocus="onFocusEvent(2)" />
-                                            <input class="form-control" id="codeBox3" name="code3" type="text" maxlength="1" onkeyup="onKeyUpEvent(3, event)" onfocus="onFocusEvent(3)" />
-                                            <input class="form-control" id="codeBox4" name="code4" type="text" maxlength="1" onkeyup="onKeyUpEvent(4, event)" onfocus="onFocusEvent(4)" />
+                                            <input class="form-control" id="codeBox1" name="code1" type="text" maxlength="1" onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)" required/>
+                                            <input class="form-control" id="codeBox2" name="code2" type="text" maxlength="1" onkeyup="onKeyUpEvent(2, event)" onfocus="onFocusEvent(2)" required />
+                                            <input class="form-control" id="codeBox3" name="code3" type="text" maxlength="1" onkeyup="onKeyUpEvent(3, event)" onfocus="onFocusEvent(3)" required />
+                                            <input class="form-control" id="codeBox4" name="code4" type="text" maxlength="1" onkeyup="onKeyUpEvent(4, event)" onfocus="onFocusEvent(4)" required />
                                         </div>
 
 

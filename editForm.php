@@ -62,8 +62,10 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <script type="text/javascript">
         $(document).ready(function() {
+
             $("#sel_category").change(function() {
                 var cateid = $(this).val();
+
                 $.ajax({
                     url: 'getType.php',
                     type: 'post',
@@ -75,7 +77,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
                         var len = response.length;
 
-                        // $("#sel_type").empty();
+                        $("#sel_type").empty();
                         for (var i = 0; i < len; i++) {
                             var id = response[i]['id'];
                             var name = response[i]['name'];
@@ -226,16 +228,15 @@ while ($row = mysqli_fetch_assoc($result)) {
                                     <select id="sel_category" name="category" class="form-control select2" style="width: 100%;" required>
                                         <?php
                                         // Fetch category
-                                        $sql_category = "SELECT * FROM category_T";
+                                        $sql_category = "SELECT DISTINCT category FROM type_T";
                                         $category_data = mysqli_query($mysqli, $sql_category);
                                         while ($row = mysqli_fetch_assoc($category_data)) {
-                                            $catid = $row['id'];
-                                            $cat_name = $row['complaint_category'];
+                                            $cat_name = $row['category'];
 
                                             if ($cat_name == $category) {
-                                                echo "<option value='" . $catid . "' selected>" . $cat_name . "</option>";
+                                                echo "<option value='" . $cat_name . "' >" . $cat_name . "</option>";
                                             } else {
-                                                echo "<option value='" . $catid . "' >" . $cat_name . "</option>";
+                                                echo "<option value='" . $cat_name . "' >" . $cat_name . "</option>";
                                             }
                                         }
                                         ?>

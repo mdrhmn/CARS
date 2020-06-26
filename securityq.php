@@ -157,7 +157,7 @@ if (
                         $studentID = $_SESSION['studentID'];
                     }
 
-                    $result = mysqli_query($mysqli, "SELECT question,answer FROM security_questions_t WHERE studentID=$studentID  ");
+                    $result = mysqli_query($mysqli, "SELECT question,answer FROM student_t WHERE studentID=$studentID  ");
                     $res = mysqli_fetch_array($result);
                     $question = $res['question'];
 
