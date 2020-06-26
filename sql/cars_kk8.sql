@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 22, 2020 at 05:31 PM
+-- Generation Time: Jun 25, 2020 at 05:09 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -131,20 +131,6 @@ INSERT INTO `activity_T` (`activityID`, `activity_name`, `activity_jtk`, `activi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `address_T`
---
-
-CREATE TABLE `address_T` (
-  `studentID` int(10) UNSIGNED DEFAULT NULL,
-  `address` varchar(500) DEFAULT NULL,
-  `city` varchar(50) DEFAULT NULL,
-  `state` varchar(50) DEFAULT NULL,
-  `zip` int(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `category_T`
 --
 
@@ -196,20 +182,8 @@ CREATE TABLE `registration_T` (
   `time_slot_picked` varchar(50) DEFAULT NULL,
   `bureau_picked` varchar(50) DEFAULT NULL,
   `reason_joining` varchar(1000) DEFAULT NULL,
-  `sent_file` varchar(100) DEFAULT NULL,
+  `sent_file` varchar(50) DEFAULT NULL,
   `reg_status` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `security_questions_T`
---
-
-CREATE TABLE `security_questions_T` (
-  `studentID` int(10) UNSIGNED DEFAULT NULL,
-  `question` varchar(100) NOT NULL,
-  `answer` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -246,8 +220,21 @@ CREATE TABLE `student_T` (
   `biography` varchar(240) DEFAULT NULL,
   `phone_no` varchar(11) DEFAULT NULL,
   `twitter_acc` varchar(50) DEFAULT NULL,
-  `facebook_acc` varchar(50) DEFAULT NULL
+  `facebook_acc` varchar(50) DEFAULT NULL,
+  `address` varchar(500) DEFAULT NULL,
+  `city` varchar(50) DEFAULT NULL,
+  `state` varchar(50) DEFAULT NULL,
+  `zip` int(5) DEFAULT NULL,
+  `question` varchar(100) NOT NULL,
+  `answer` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `student_T`
+--
+
+INSERT INTO `student_T` (`studentID`, `username`, `password`, `email`, `first_name`, `last_name`, `profile_pic_path`, `faculty`, `biography`, `phone_no`, `twitter_acc`, `facebook_acc`, `address`, `city`, `state`, `zip`, `question`, `answer`) VALUES
+(17138489, 'mdrhmn', '$2y$10$J2KRDOmHsOqzPwYZPX0on.kHq1bECN0HLi5uyr/8l8Jv1xvYLzXCy', 'mdrhmn99@siswa.um.edu.my', 'Muhammad Rahiman', 'Abdulmanab', 'test.jpg', 'Faculty of Computer Science & Information Technology', 'Luctor Et Emergo', '0148912758', '', '', 'No. 53G, Lot 12684, Yen Yen Park; Jalan Matang', 'Kuching', 'Sarawak', 93050, 'What\'s your favorite color?', 'Black');
 
 -- --------------------------------------------------------
 
@@ -258,7 +245,7 @@ CREATE TABLE `student_T` (
 CREATE TABLE `type_T` (
   `id` int(11) NOT NULL,
   `name` varchar(80) NOT NULL,
-  `category` int(11) NOT NULL
+  `category` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -266,40 +253,40 @@ CREATE TABLE `type_T` (
 --
 
 INSERT INTO `type_T` (`id`, `name`, `category`) VALUES
-(1, 'Air-conditioner', 4),
-(2, 'Autogate-barrier', 2),
-(3, 'Bed', 4),
-(4, 'Bookshelf', 4),
-(5, 'Cabinet', 4),
-(6, 'Ceiling', 4),
-(7, 'Chair', 4),
-(8, 'Cleanliness', 2),
-(9, 'Clogged', 2),
-(10, 'Cloth hanger', 4),
-(11, 'Counter Service', 2),
-(12, 'Curtain', 4),
-(13, 'Door', 4),
-(14, 'Door lock', 4),
-(15, 'Drain', 2),
-(16, 'Drawer/Cupboard', 4),
-(17, 'Fan', 4),
-(18, 'Iron', 3),
-(19, 'Lamp', 4),
-(20, 'Leaked', 2),
-(21, 'Lift', 2),
-(22, 'Mattress', 4),
-(23, 'Mirror', 4),
-(24, 'Piping', 2),
-(25, 'Plug', 4),
-(26, 'Roof', 2),
-(27, 'Shower', 1),
-(28, 'Sink', 1),
-(29, 'Table', 4),
-(30, 'Tile/Floor', 4),
-(31, 'Toilet bowl', 1),
-(32, 'Water boiler', 3),
-(33, 'Water dispenser', 3),
-(34, 'Window', 4);
+(1, 'Air-conditioner', 'Room'),
+(2, 'Autogate-barrier', 'Outdoor'),
+(3, 'Bed', 'Room'),
+(4, 'Bookshelf', 'Room'),
+(5, 'Cabinet', 'Room'),
+(6, 'Ceiling', 'Room'),
+(7, 'Chair', 'Room'),
+(8, 'Cleanliness', 'Outdoor'),
+(9, 'Clogged', 'Outdoor'),
+(10, 'Cloth hanger', 'Room'),
+(11, 'Counter Service', 'Outdoor'),
+(12, 'Curtain', 'Room'),
+(13, 'Door', 'Room'),
+(14, 'Door lock', 'Room'),
+(15, 'Drain', 'Outdoor'),
+(16, 'Drawer/Cupboard', 'Room'),
+(17, 'Fan', 'Room'),
+(18, 'Iron', 'Pantry'),
+(19, 'Lamp', 'Room'),
+(20, 'Leaked', 'Outdoor'),
+(21, 'Lift', 'Outdoor'),
+(22, 'Mattress', 'Room'),
+(23, 'Mirror', 'Room'),
+(24, 'Piping', 'Outdoor'),
+(25, 'Plug', 'Room'),
+(26, 'Roof', 'Outdoor'),
+(27, 'Shower', 'Indoor'),
+(28, 'Sink', 'Indoor'),
+(29, 'Table', 'Room'),
+(30, 'Tile/Floor', 'Room'),
+(31, 'Toilet bowl', 'Indoor'),
+(32, 'Water boiler', 'Pantry'),
+(33, 'Water dispenser', 'Pantry'),
+(34, 'Window', 'Room');
 
 --
 -- Indexes for dumped tables
@@ -312,22 +299,10 @@ ALTER TABLE `activityBureau_T`
   ADD KEY `activityID` (`activityID`);
 
 --
--- Indexes for table `activityTime_T`
---
-ALTER TABLE `activityTime_T`
-  ADD KEY `activityID` (`activityID`);
-
---
 -- Indexes for table `activity_T`
 --
 ALTER TABLE `activity_T`
   ADD PRIMARY KEY (`activityID`);
-
---
--- Indexes for table `address_T`
---
-ALTER TABLE `address_T`
-  ADD UNIQUE KEY `studentID` (`studentID`);
 
 --
 -- Indexes for table `category_T`
@@ -350,12 +325,6 @@ ALTER TABLE `registration_T`
   ADD KEY `activityID` (`activityID`);
 
 --
--- Indexes for table `security_questions_T`
---
-ALTER TABLE `security_questions_T`
-  ADD UNIQUE KEY `studentID` (`studentID`);
-
---
 -- Indexes for table `student_exp_T`
 --
 ALTER TABLE `student_exp_T`
@@ -367,12 +336,6 @@ ALTER TABLE `student_exp_T`
 --
 ALTER TABLE `student_T`
   ADD PRIMARY KEY (`studentID`);
-
---
--- Indexes for table `type_T`
---
-ALTER TABLE `type_T`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -403,12 +366,6 @@ ALTER TABLE `student_exp_T`
   MODIFY `experienceID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `type_T`
---
-ALTER TABLE `type_T`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-
---
 -- Constraints for dumped tables
 --
 
@@ -417,18 +374,6 @@ ALTER TABLE `type_T`
 --
 ALTER TABLE `activityBureau_T`
   ADD CONSTRAINT `activitybureau_t_ibfk_1` FOREIGN KEY (`activityID`) REFERENCES `activity_T` (`activityID`);
-
---
--- Constraints for table `activityTime_T`
---
-ALTER TABLE `activityTime_T`
-  ADD CONSTRAINT `activitytime_t_ibfk_1` FOREIGN KEY (`activityID`) REFERENCES `activity_T` (`activityID`);
-
---
--- Constraints for table `address_T`
---
-ALTER TABLE `address_T`
-  ADD CONSTRAINT `address_t_ibfk_1` FOREIGN KEY (`studentID`) REFERENCES `student_T` (`studentID`);
 
 --
 -- Constraints for table `complaint_T`
@@ -442,12 +387,6 @@ ALTER TABLE `complaint_T`
 ALTER TABLE `registration_T`
   ADD CONSTRAINT `registration_t_ibfk_1` FOREIGN KEY (`studentID`) REFERENCES `student_T` (`studentID`),
   ADD CONSTRAINT `registration_t_ibfk_2` FOREIGN KEY (`activityID`) REFERENCES `activity_T` (`activityID`);
-
---
--- Constraints for table `security_questions_T`
---
-ALTER TABLE `security_questions_T`
-  ADD CONSTRAINT `security_questions_t_ibfk_1` FOREIGN KEY (`studentID`) REFERENCES `student_T` (`studentID`);
 
 --
 -- Constraints for table `student_exp_T`
