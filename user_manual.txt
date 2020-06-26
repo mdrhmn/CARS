@@ -1,0 +1,19 @@
+WEB PROGRAMMING [WIF2003] GROUP PROJECT
+---------------------------------------
+
+GROUP NAME	: CITIZENSCIENTIST
+
+GROUP MEMBERS	:
+1. AJWAD BIN ALIAS (WIF180005 - 17171780/2)
+2. MUHAMMAD RAHIMAN BIN ABDULMANAB (WIF180046 - 17138489/2)
+3. NUR FAIDZ HAZIRAH BINTI NOR'AZMAN (WIF180059 - 17070482/1)
+4. REZAMIR BIN RAHIZAR (WIF180082 - 17172965/1)
+
+SOURCE CODE USER MANUAL
+-----------------------
+
+1. Download project files from SPeCTRUM
+2. Place 'CARS' project folder inside htdocs folder at XAMPP's directory
+2. Edit XAMPP's php.ini file 
+	- Change post_max_size =0 and upload_max_filesize = 999M
+3. Set up database at phpMyAdmin using cars_kk8.sql
